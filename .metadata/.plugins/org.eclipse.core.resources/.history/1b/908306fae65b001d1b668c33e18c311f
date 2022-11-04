@@ -41,9 +41,9 @@ public class LivroDAO extends BaseDAO {
 		return sql.execute();
 	}
 	
-	public boolean deleteLivro(int cod) throws SQLException {
+	public boolean deleteLivro(int cod) {
 		PreparedStatement sql = conn.prepareStatement("DELETE tblivros WHERE codLivro = ?");
-		sql.setInt(1, cod);
+		sql.setInt(1, cod));
 		
 		return sql.execute();
 	}

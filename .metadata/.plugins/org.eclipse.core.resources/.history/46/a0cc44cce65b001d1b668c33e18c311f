@@ -30,20 +30,13 @@ public class LivroDAO extends BaseDAO {
         return livro;
 	}
 	
-	public boolean addLivro(LivroDTO livro) throws SQLException {
-		PreparedStatement sql = conn.prepareStatement("INSERT  INTO tblivros (`codlivro`,`titulo`,`autor`,`categoria`,`valor`) VALUES (?, ?, ?, ?, ?)");
+	public bool addLivro(LivroDTO livro) throws SQLException {
+		PreparedStatement sql = conn.prepareStatement("INSERT  INTO `tblivros`(`codlivro`,`titulo`,`autor`,`categoria`,`valor`) VALUES (?, ?, ?, ?, ?)");
 		sql.setInt(1, livro.getCodlivro());
 		sql.setString(2, livro.getTitulo());
 		sql.setString(3, livro.getAutor());
 		sql.setString(4, livro.getCategoria());
 		sql.setDouble(5, livro.getValor());
-		
-		return sql.execute();
-	}
-	
-	public boolean deleteLivro(int cod) throws SQLException {
-		PreparedStatement sql = conn.prepareStatement("DELETE tblivros WHERE codLivro = ?");
-		sql.setInt(1, cod);
 		
 		return sql.execute();
 	}
