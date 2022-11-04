@@ -22,6 +22,6 @@ public class UsuarioDTO {
 	
 	@Override
 	public String toString() {
-		return "RM: " + getLogin() + ", Nome: " + getNome() + "\n";
+		return "RM: " + getLogin() + ", Nome: " + getNome();
 	}
 }

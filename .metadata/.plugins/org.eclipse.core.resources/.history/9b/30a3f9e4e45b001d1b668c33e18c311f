@@ -19,9 +19,4 @@ public class UsuarioDTO {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	@Override
-	public String toString() {
-		return "RM: " + getLogin() + ", Nome: " + getNome() + "\n";
-	}
 }

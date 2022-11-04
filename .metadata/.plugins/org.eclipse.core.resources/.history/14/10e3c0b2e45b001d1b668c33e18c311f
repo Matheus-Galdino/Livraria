@@ -29,4 +29,9 @@ public class LivroDAO extends BaseDAO {
         
         return livro;
 	}
+	
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+		LivroDTO livro = new LivroDAO().getLivroPorCodigo(1);
+		System.out.println(livro.getTitulo());
+	}
 }

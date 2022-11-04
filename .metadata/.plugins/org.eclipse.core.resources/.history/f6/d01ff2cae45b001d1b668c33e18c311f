@@ -29,9 +29,4 @@ public class UsuarioDAO extends BaseDAO {
 		
 		return usuarios;
 	}
-	
-	public static void main(String[] args) throws SQLException, ClassNotFoundException {
-		ArrayList<UsuarioDTO> usuarios = new UsuarioDAO().getUsuarios();
-		System.out.println(usuarios);
-	}
 }
