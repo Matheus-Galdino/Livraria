@@ -1,0 +1,30 @@
+package connection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class MySqlConn {
+	
+	private String url = "jdbc:mysql://localhost/dblivraria?useTimezone=true&serverTimezone=UTC";
+	private String driver = "com.mysql.cj.jdbc.Driver";
+	private String user = "root";
+	private String pwd = "1234";
+	
+	public Connection getConn() {
+		Connection conn = null;
+		
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, user, pwd);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return conn;
+	}
+	
+	public static void main(String[] args) {
+		new MySqlConn().getConn();
+		System.out.println("OK");
+	}
+}

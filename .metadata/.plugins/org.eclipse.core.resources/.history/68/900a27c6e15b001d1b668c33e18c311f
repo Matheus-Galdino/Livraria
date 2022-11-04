@@ -1,0 +1,50 @@
+package daos;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import connection.MySqlConn;
+import dtos.LivroDTO;
+
+public class LivroDAO {
+	
+	private Connection conn;
+	
+	public LivroDAO() {
+		conn = new MySqlConn().getConn();
+		System.out.println("conn criado");
+		System.out.println(conn);
+	}
+	
+	public LivroDTO getLivroPorCodigo(int cod) throws SQLException {
+
+		if(conn == null) {
+			System.out.println("NULO");
+			return null;
+		}	
+		
+		PreparedStatement sql = conn.prepareStatement("SELECT * FROM tblivros WHERE codLivro = ?");
+		sql.setInt(1, cod);
+		
+		System.out.println(sql);
+		
+		ResultSet rs = sql.executeQuery();
+        rs.next();
+        
+        LivroDTO livro = new LivroDTO();
+        livro.setCodlivro(rs.getInt(0));
+        livro.setTitulo(rs.getString(1));
+        livro.setAutor(rs.getString(2));
+        livro.setCategoria(rs.getString(3));
+        livro.setValor(rs.getDouble(4));
+        
+        return livro;
+	}
+	
+	public static void main(String[] args) throws SQLException {
+		LivroDTO livro = new LivroDAO().getLivroPorCodigo(1);
+		System.out.println(livro.getTitulo());
+	}
+}

@@ -1,0 +1,14 @@
+package daos;
+
+import java.sql.Connection;
+
+import connection.MySqlConn;
+
+public class LivroDAO {
+	
+	private Connection conn = null;
+	
+	public LivroDAO() {
+		conn = new MySqlConn().getConn();
+	}
+}

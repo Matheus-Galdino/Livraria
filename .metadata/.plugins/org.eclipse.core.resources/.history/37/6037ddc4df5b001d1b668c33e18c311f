@@ -1,0 +1,22 @@
+package daos;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import connection.MySqlConn;
+import dtos.LivroDTO;
+
+public class LivroDAO {
+	
+	private Connection conn = null;
+	
+	public LivroDAO() {
+		conn = new MySqlConn().getConn();
+	}
+	
+	public LivroDTO getLivroPorCodigo(int cod) throws SQLException {
+		Statement sql = conn.prepareStatement("SELECT * FROM tblivros WHERE codLivro = ?");
+		
+	}
+}
