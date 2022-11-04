@@ -1,0 +1,11 @@
+package daos;
+
+import java.sql.SQLException;
+
+public class CategoriaDAO extends BaseDAO {
+
+	public CategoriaDAO() throws ClassNotFoundException, SQLException {
+		super();
+	}
+
+}
