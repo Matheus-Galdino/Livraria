@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set value="${requestScope.categorias}" var="categorias" />
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Consultar livro por categoria</title>
+</head>
+<body>
+	<form action="ListaLivrosPorCategoria" method="post">
+		<label>Categoria: </label> 
+		<select name="categoria">
+			<c:forEach items="${ categorias }" var="categoria">
+				<option>categoria.categoria</option>
+			</c:forEach>
+		</select>
+
+		<button>Enviar</button>
+	</form>
+</body>
+</html>

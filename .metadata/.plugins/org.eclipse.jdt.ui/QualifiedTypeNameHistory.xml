@@ -6,15 +6,18 @@
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Statement"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
-    <fullyQualifiedTypeName name="dtos.LivroDTO"/>
     <fullyQualifiedTypeName name="java.awt.print.Book"/>
-    <fullyQualifiedTypeName name="daos.LivroDAO"/>
     <fullyQualifiedTypeName name="connection.MySqlConn"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="dtos.UsuarioDTO"/>
     <fullyQualifiedTypeName name="daos.BaseDAO"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="dtos.UsuarioDTO"/>
+    <fullyQualifiedTypeName name="daos.UsuarioDAO"/>
+    <fullyQualifiedTypeName name="servlets.GetAlunos"/>
+    <fullyQualifiedTypeName name="dtos.LivroDTO"/>
+    <fullyQualifiedTypeName name="daos.LivroDAO"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

@@ -21,14 +21,16 @@ ul {
 </head>
 <body>
 	<nav>
-		
+		<div class="nav-links">
+			<a href="#">Listar livros por categoria</a>
+			<a href="#">Cadastrar livros</a>
+			<a href="#">Mostrar livros</a>
+		</div>
 	</nav>
 
 	<ul class="alunos-list">
 		<c:forEach items="${ alunos }" var="aluno">
-			<li>
-				RGM: ${ aluno.login } | Nome: ${ aluno.nome }
-			</li>
+			<li>RGM: ${ aluno.login } | Nome: ${ aluno.nome }</li>
 		</c:forEach>
 	</ul>
 </body>

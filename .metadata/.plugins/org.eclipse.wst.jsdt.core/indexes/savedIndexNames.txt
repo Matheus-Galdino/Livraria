@@ -1,6 +1,7 @@
 INDEX VERSION 1.4+C:\Users\mathe\Desktop\livraria\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 3082557288.index
 7230361.index
+3082557288.index
 1499654356.index
 2795311219.index
 4010404357.index
