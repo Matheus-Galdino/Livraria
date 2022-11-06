@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set value="${requestScope.livros}" var="livros" />
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Livros filtrados pela categoria</title>
+
+<style type="text/css">
+ul {
+	list-style: none;
+}
+</style>
+</head>
+<body>
+	<ul>
+		<c:forEach items="${ livros }" var="livro">
+		<li>
+			<p>${livro.codlivro }</p>
+			<p>${livro.titulo }</p>
+			<p>${livro.valor }</p>
+		</li>
+		</c:forEach>
+	</ul>
+</body>
+</html>

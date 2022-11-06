@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set value="${requestScope.livro}" var="livro" />
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Detalhes livro</title>
+</head>
+<body>
+	<h2>Código do livro:</h2>
+	<p>${ livro.codlivro } </p>
+	
+	<h2>Título:</h2>
+	<p>${ livro.titulo } </p>
+	
+	<h2>Autor:</h2>
+	<p>${ livro.autor } </p>
+	
+	<h2>Categoria:</h2>
+	<p>${ livro.categoria } </p>
+	
+	<h2>Valor:</h2>
+	<p>R$ ${ livro.valor } </p>
+</body>
+</html>

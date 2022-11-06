@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set value="${requestScope.livro}" var="livro" />
+<c:set value="${requestScope.cod }" var="cod" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
 </head>
 <body>
 	<h2>Código do livro:</h2>
-	<p>${ livro.codLivro } </p>
+	<p>${ cod } </p>
 	
 	<h2>Título:</h2>
 	<p>${ livro.titulo } </p>

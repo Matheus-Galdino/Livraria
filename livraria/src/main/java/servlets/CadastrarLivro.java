@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import daos.CategoriaDAO;
+import daos.LivroDAO;
 import dtos.CategoriaDTO;
+import dtos.LivroDTO;
 
 @WebServlet("/CadastrarLivro")
 public class CadastrarLivro extends HttpServlet {
@@ -27,8 +29,24 @@ public class CadastrarLivro extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		int cod = Integer.parseInt(request.getParameter("cod"));
+		String titulo = request.getParameter("titulo");
+		String autor = request.getParameter("autor");
+		String categoria = request.getParameter("categoria");
+		double valor = Double.parseDouble(request.getParameter("valor"));
+		
+		LivroDTO livro = new LivroDTO();
+		livro.setCodlivro(cod);
+		livro.setTitulo(titulo);
+		livro.setAutor(autor);
+		livro.setCategoria(categoria);
+		livro.setValor(valor);
+		
+		try {
+			new LivroDAO().addLivro(livro);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

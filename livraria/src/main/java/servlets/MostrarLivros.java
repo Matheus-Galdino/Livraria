@@ -25,6 +25,7 @@ public class MostrarLivros extends HttpServlet {
 		try {
 			LivroDTO livro = new LivroDAO().getLivroPorCodigo(cod);
 			request.setAttribute("livro", livro);
+			request.setAttribute("cod", livro.getCodlivro());
 			request.getRequestDispatcher("detalhesLivro.jsp").forward(request, response);
 		} catch (Exception e) {			
 			response.setContentType("text/html;charset=UTF-8");

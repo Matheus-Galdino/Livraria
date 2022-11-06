@@ -1,7 +1,7 @@
 package dtos;
 
 public class LivroDTO {
-	private int codlivro;
+	private int codLivro;
 	private String titulo;
 	private String autor;
 	private String categoria;
@@ -9,11 +9,11 @@ public class LivroDTO {
 
 
 	public int getCodlivro() {
-		return codlivro;
+		return codLivro;
 	}
 
-	public void setCodlivro(int codlivro) {
-		this.codlivro = codlivro;
+	public void setCodlivro(int codLivro) {
+		this.codLivro = codLivro;
 	}
 
 	public String getTitulo() {

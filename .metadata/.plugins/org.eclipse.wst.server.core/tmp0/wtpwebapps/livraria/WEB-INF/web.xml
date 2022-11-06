@@ -9,24 +9,4 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-  
-  <servlet>
-  	<servlet-name>GetAlunos</servlet-name>
-  	<servlet-class>servlets.GetAlunos</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name>GetAlunos</servlet-name>
-  	<url-pattern></url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>MostrarLivros</servlet-name>
-  	<servlet-class>servlets.MostrarLivros</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name>MostrarLivros</servlet-name>
-  	<url-pattern>/MostrarLivros</url-pattern>
-  </servlet-mapping>
 </web-app>
