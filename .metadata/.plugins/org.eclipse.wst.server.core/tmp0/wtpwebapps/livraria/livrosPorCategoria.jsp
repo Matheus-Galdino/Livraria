@@ -11,6 +11,7 @@
 <style type="text/css">
 table {
 	text-align: center;
+	border-collapse: collapse;
 }
 
 td {
@@ -25,6 +26,8 @@ td {
 			<tr>
 				<td>Cod livro</td>
 				<td>Titulo</td>
+				<td>Autor</td>
+				<td>Categoria</td>
 				<td>Valor</td>
 			</tr>
 		</thead>
@@ -33,6 +36,8 @@ td {
 				<tr>
 					<td>${ livro.codlivro }</td>
 					<td>${ livro.titulo }</td>
+					<td>${ livro.autor }</td>
+					<td>${ livro.categoria }</td>
 					<td>R$ ${ livro.valor }</td>
 				</tr>
 			</c:forEach>

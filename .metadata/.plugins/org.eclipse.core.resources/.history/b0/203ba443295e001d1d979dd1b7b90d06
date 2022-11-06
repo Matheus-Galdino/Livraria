@@ -1,7 +1,6 @@
 package servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -43,16 +42,11 @@ public class CadastrarLivro extends HttpServlet {
 		livro.setCategoria(categoria);
 		livro.setValor(valor);
 		
-		response.setContentType("text/html;charset=UTF-8");
-		PrintWriter out = response.getWriter();
 		try {
 			new LivroDAO().addLivro(livro);
-			out.println("<p>Livro " + titulo + " cadastrado com sucesso!!</p>");
 		} catch (Exception e) {
 			e.printStackTrace();
-			out.println("<p>Erro ao salvar, tente novamente!</p>");
-		} finally {
-			out.println("<a href='Home'>Voltar ao inicio</a>");
+			response.getWriter().println("Erro ao salvar, tente novamente!");
 		}
 	}
 

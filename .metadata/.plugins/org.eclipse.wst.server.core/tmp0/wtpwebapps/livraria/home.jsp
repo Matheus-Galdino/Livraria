@@ -7,9 +7,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Livraria</title>
 
 <style type="text/css">
+body {
+text-align: center;
+}
+
 ul {
 	list-style: none;
 }

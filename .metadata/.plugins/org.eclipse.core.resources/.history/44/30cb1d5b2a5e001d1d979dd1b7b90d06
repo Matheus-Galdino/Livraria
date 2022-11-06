@@ -1,24 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:set value="${requestScope.livros}" var="livros" />
+<c:set value="${requestScope.livro}" var="livro" />
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Livros filtrados pela categoria</title>
-
-<style type="text/css">
-table {
-	text-align: center;
-	border-collapse: collapse;
-}
-
-td {
-	padding: 5px;
-	border: 1px solid #000;
-}
-</style>
+<title>Detalhes livro</title>
 </head>
 <body>
 	<table>
@@ -32,7 +20,6 @@ td {
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach items="${ livros }" var="livro">
 				<tr>
 					<td>${ livro.codlivro }</td>
 					<td>${ livro.titulo }</td>
@@ -40,7 +27,6 @@ td {
 					<td>${ livro.categoria }</td>
 					<td>R$ ${ livro.valor }</td>
 				</tr>
-			</c:forEach>
 		</tbody>
 	</table>
 </body>

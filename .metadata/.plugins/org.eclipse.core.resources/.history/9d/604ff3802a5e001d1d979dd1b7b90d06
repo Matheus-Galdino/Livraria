@@ -11,7 +11,7 @@
 
 <style type="text/css">
 body {
-text-align: center;
+	text-align: center;
 }
 
 ul {
@@ -26,9 +26,9 @@ ul {
 <body>
 	<nav>
 		<div class="nav-links">
-			<a href="ListaLivrosPorCategoria">Listar livros por categoria</a>
-			<a href="CadastrarLivro">Cadastrar livros</a>
-			<a href="MostrarLivros">Mostrar livros</a>
+			<a href="ListaLivrosPorCategoria">Listar livros por categoria</a> <a
+				href="CadastrarLivro">Cadastrar livros</a> <a href="MostrarLivros">Mostrar
+				livros</a>
 		</div>
 	</nav>
 
